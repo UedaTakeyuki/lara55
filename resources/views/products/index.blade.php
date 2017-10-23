@@ -11,14 +11,14 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container">
-    <br />
-    @if (\Session::has('success'))
-      <div class="alert alert-success">
-        <p>{{ \Session::get('success') }}</p>
-      </div><br />
-     @endif
-    <table class="table table-striped">
+<div class="container">
+<br />
+  @if (\Session::has('success'))
+    <div class="alert alert-success">
+      <p>{{ \Session::get('success') }}</p>
+    </div><br />
+  @endif
+  <table class="table table-striped">
     <thead>
       <tr>
         <th>ID</th>
@@ -45,7 +45,8 @@
       @endforeach
     </tbody>
   </table>
-  </div>
+  <button type="submit" class="btn btn-success" style="position: fixed; bottom: 0; left:50%; transform:translateX(-50%);">Add Product</button>
+</div>
 @endsection
 <!--  </body>
 </html> -->
