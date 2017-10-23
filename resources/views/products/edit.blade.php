@@ -1,13 +1,16 @@
 <!-- edit.blade.php -->
 
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
     <title>Laravel 5.5 CRUD Tutorial With Example From Scratch </title>
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
   </head>
-  <body>
+  <body> -->
+@extends('layouts.app')
+
+@section('content')
     <div class="container">
       <h2>Edit A Product</h2><br  />
       @if ($errors->any())
@@ -45,5 +48,6 @@
         </div>
       </form>
     </div>
-  </body>
-</html>
+@endsection
+<!--  </body>
+</html> -->
