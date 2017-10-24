@@ -45,7 +45,7 @@
       @endforeach
     </tbody>
   </table>
-  <button type="submit" class="btn btn-success" style="position: fixed; bottom: 0; left:50%; transform:translateX(-50%);">Add Product</button>
+  <button type="submit" class="btn btn-success" style="position: fixed; bottom: 0; left:50%; transform:translateX(-50%); margin-bottom: 50px;">Add Product</button>
 </div>
 @endsection
 <!--  </body>
