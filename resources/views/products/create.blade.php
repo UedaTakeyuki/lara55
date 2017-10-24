@@ -1,6 +1,6 @@
 <!-- create.blade.php -->
 
-<!--<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
@@ -38,10 +38,9 @@
         </div>
         <div class="row">
           <div class="col-md-4"></div>
-            <div class="form-group col-md-4">
-              <label for="price">Price:</label>
-              <input type="text" class="form-control" name="price">
-            </div>
+          <div class="form-group col-md-4">
+            <label for="price">Price:</label>
+            <input type="text" class="form-control" name="price">
           </div>
         </div>
         <div class="row">
@@ -54,4 +53,4 @@
     </div>
 @endsection
 <!--  </body>
-</html>-->
+</html> -->
