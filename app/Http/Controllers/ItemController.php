@@ -34,9 +34,16 @@ class ItemController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+//    public function store(Request $request)
+    public function store(ItemStoreFormRequest $request)
     {
         //
+        $item = new Item();
+        // todo: ログインユーザのidが入るようにする
+        $item->user_id = \App\User::query()->first()->id;
+        $item->content = $request->input('content');
+        $item->save();
+        return response($item, 201);
     }
 
     /**
@@ -48,6 +55,7 @@ class ItemController extends Controller
     public function show(Item $item)
     {
         //
+        return response($item);
     }
 
     /**
@@ -68,9 +76,19 @@ class ItemController extends Controller
      * @param  \App\Item  $item
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Item $item)
+//    public function update(Request $request, Item $item)
+    public function update(ItemUpdateFormRequest $request, Item $item)
     {
         //
+        if ($request->input('content')) {
+            $item->content = $request->input('content');
+        }
+        if ($request->input('checked')) {
+            $item->checked = $request->input('checked');
+        }
+ 
+        $item->save();
+        return response($item);
     }
 
     /**
@@ -82,5 +100,7 @@ class ItemController extends Controller
     public function destroy(Item $item)
     {
         //
+        $item->delete();
+        return response('{}'); // 返すものがないので空のJSONを返す
     }
 }
