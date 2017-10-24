@@ -20,3 +20,9 @@ Vue.component('example', require('./components/Example.vue'));
 const app = new Vue({
     el: '#app'
 });
+
+Vue.component('hello', require('./components/Hello.vue'));
+
+const app_hello = new Vue({
+    el: '#app_hello'
+});

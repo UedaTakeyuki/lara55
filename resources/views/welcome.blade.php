@@ -89,9 +89,17 @@
                     <a href="https://forge.laravel.com">Forge</a>
                     <a href="https://github.com/laravel/laravel">GitHub</a>
                 </div>
+                
                 <div id="app">
                     <example></example>
                 </div>
+                
+                <div id="app_hello">
+                    <hello></hello>
+                    <hello name="Laravel"></hello>
+                    <hello name="Vue.js"></hello>
+                </div>
+
                 <script src="js/app.js"></script>
             </div>
         </div>
